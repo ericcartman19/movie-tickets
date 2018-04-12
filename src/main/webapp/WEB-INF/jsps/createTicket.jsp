@@ -11,9 +11,9 @@
 	<form action="createTicket" method="post">
 	
 	<!-- si usamos los mismos nombre para los componentes que en el model, Spring hara el bindgin de manera automatica -->
-	Movie Name: <input type="text" name="movie">
-	Movie Screen: <input type="text" name="screen">
-	Movie Seat: <input type="text" name="seat"> 
+	Movie Name: <input type="text" name="movieName">
+	Movie Screen: <input type="text" name="screenNo">
+	Movie Seat: <input type="text" name="seatNo"> 
 	
 	<input type="submit" value="purchase"/>
 	</form>

@@ -17,6 +17,9 @@
 	
 	<input type="submit" value="purchase"/>
 	</form>
+	
+	<!-- este mensaje es binded by Spring en ModelMap -->
+	<h2>${msg}</h2>
 
 </body>
 </html>

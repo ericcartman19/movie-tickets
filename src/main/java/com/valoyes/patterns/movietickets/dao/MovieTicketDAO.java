@@ -1,4 +1,4 @@
-package com.valoyes.patterns.movietickets.DAO;
+package com.valoyes.patterns.movietickets.dao;
 
 import com.valoyes.patterns.movietickets.entities.MovieTicket;
 

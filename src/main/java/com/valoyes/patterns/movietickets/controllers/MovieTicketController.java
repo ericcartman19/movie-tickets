@@ -6,7 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.valoyes.patterns.movietickets.dao.MovieTicketDAO;
-import com.valoyes.patterns.movietickets.entities.MovieTicket;
+import com.valoyes.patterns.movietickets.bo.MovieTicket;
 import com.valoyes.patterns.movietickets.services.MovieTicketService;
 
 // controller annotation from Spring

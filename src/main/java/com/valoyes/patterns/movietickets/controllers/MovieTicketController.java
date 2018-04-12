@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.valoyes.patterns.movietickets.dao.MovieTicketDAO;
 import com.valoyes.patterns.movietickets.entities.MovieTicket;
+import com.valoyes.patterns.movietickets.services.MovieTicketService;
 
 // controller annotation from Spring
 @Controller
@@ -14,6 +15,9 @@ public class MovieTicketController {
 
 	@Autowired
 	private MovieTicketDAO dao;
+	
+	@Autowired
+	private MovieTicketService movieTicketService; 
 	
 	@RequestMapping("/showCreateTicket")
 	public String showCreateTicket() {
@@ -36,7 +40,9 @@ public class MovieTicketController {
 	@RequestMapping("/createTicket")
 	public String createTicket(MovieTicket ticket, ModelMap modelMap) {
 		
-		dao.create(ticket);
+		// dao.create(ticket);
+		// el controlador (presentation layer) no debe acceder directamente a la data acces layer (dao)
+		movieTicketService.purchaseTicket(ticket); 
 		modelMap.addAttribute("msg", "Se ha realizado con exito la compra del ticket");
 		// seguumos volviendo a la pagina de entrada
 		return "createTicket";
